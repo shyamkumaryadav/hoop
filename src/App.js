@@ -1,13 +1,11 @@
 import React from 'react';
+import Items from './components/Items.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>
-          hoop this is Edit <code>src/App.js</code>.
-        </h2>
-         <h1>Learn React if you alone !!!</h1>
+        <Items />
       </header>
     </div>
   );
