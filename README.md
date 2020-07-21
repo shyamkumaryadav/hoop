@@ -3,7 +3,7 @@
 Get Start with React first Time in my Life...
 
 
-This site live at (newhoop.herokuapp.com)[https://newhoop.herokuapp.com/]
+### [newhoop.herokuapp.com](https://newhoop.herokuapp.com) is my place..
 
 ```
 You can now view hoop in the browser.
@@ -11,9 +11,8 @@ You can now view hoop in the browser.
 >>> npm install
 
 >>> npm start
-
-***************hoop***************
 ```
 
+username:shyamkumaryadav
 
 <!-- $ heroku create newhoop --buildpack mars/create-react-app -->
