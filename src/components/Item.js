@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
-var change = (e) => {
-    console.log("Click item name", e.target.id);
-};
+import React, { Component, Fragment } from 'react'
 export default class Item extends Component {
+
+    change = (e) => {
+        console.log("Click: " + this.props.name + " item id:", e.target.text);
+    }
 
     render() {
         return (
-            <div>
-                <h1 onClick={change} id={this.props.id}>hello {this.props.name} {this.props.isdone}!!!</h1>
-            </div>
+            <Fragment>
+                <h1 onClick={this.change}>{"hello " + this.props.name + " " + this.props.isdone + " !!!"}</h1>
+            </Fragment>
         )
     }
 }
