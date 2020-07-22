@@ -23,15 +23,7 @@ export default class Items extends Component {
                 ]
         }
     };
-    // const taskList = this.state.items.map(task => (
-    //     <Item
-    //         id={task.id}
-    //         name={task.name}
-    //         completed={task.completed}
-    //         key={task.id}
-    //     />
-    // )
-    // );
+
     render() {
         return (
             <div>
