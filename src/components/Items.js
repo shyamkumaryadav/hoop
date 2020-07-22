@@ -37,7 +37,7 @@ export default class Items extends Component {
             <div>
                 <h1>Items are: </h1>
                 {this.state.items.map(task => {
-                    return <Item key={task.id} name={task.name} isdone={task.is_done} />;
+                    return <Item key={task.id} id={task.id} name={task.name} isdone={task.is_done} />;
                 })}
                 {/* {this.itemApp} */}
             </div>
