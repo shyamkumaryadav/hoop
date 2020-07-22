@@ -1,11 +1,13 @@
 import React from 'react';
-import Items from './components/Items.js';
+import Hadder from "./nav/Hadder";
+import Cards from "./components/Cards";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Items />
+        <Hadder />
+        <Cards />
       </header>
     </div>
   );
