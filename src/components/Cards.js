@@ -1,48 +1,47 @@
 import React, { Component, Fragment } from 'react'
+import Card from './Card'
+import axios from 'axios'
 
-const widthDiv = {
-    width: "18rem"
-};
 
-const Image = (props) => {
-    return (
-        <div className="card" style={widthDiv}>
-            <img src="https://picsum.photos/300/300" className="card-img-top" alt="..."></img>
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">id is {props.id} quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" onMouseLeave={props.btnclick} onMouseOver={props.btnclick} className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div >
-    )
-}
 export default class Cards extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            message: false
+            posts: [],
+            is_load: false,
+            number: Math.floor(Math.random() * Math.floor(60))
         }
     }
-    static getDerivedStateFromProps(props, state) {
-        console.log("componet getDerivedStateFromProps")
-        return null
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/photos?albumId=' + this.state.number, { method: 'GET' })
+            .then(res => res.json())
+            .then(res => {
+                if (res.ok) {
+                    console.log(res.data)
+                    this.setState({
+                        post: res.data,
+                        is_load: true
+                    })
+                }
+            }
+            )
+            .catch(error => {
+                console.log(error)
+            })
     }
-
-
-    imageCheck = () => {
-        this.setState({
-            message: !this.state.message
-        })
-    }
-
 
     render() {
         return (
             <Fragment>
-                <h1>Cards:{this.state.message ? "checked" : ""}<br /></h1>
-                <Image btnclick={this.imageCheck} id={<h1>Shyam</h1>} />
-            </Fragment>
+                <h3 className="text-center" style={{ color: "red" }}>List of Posts</h3>
+                <div className="row">
+                    {
+                        this.state.is_load &&
+                        this.state.posts.map(post => <Card key={post.id} post={post}></Card>)
+                    }
+                </div>
+            </Fragment >
         )
     }
 }
