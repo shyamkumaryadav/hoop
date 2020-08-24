@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import Card from './Card'
-import axios from 'axios'
 
 
 export default class Cards extends Component {
@@ -14,21 +13,28 @@ export default class Cards extends Component {
         }
     }
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/photos?albumId=' + this.state.number, { method: 'GET' })
-            .then(res => res.json())
-            .then(res => {
-                if (res.ok) {
-                    console.log(res.data)
-                    this.setState({
-                        post: res.data,
-                        is_load: true
-                    })
+        console.log("*****************************************ComponentDidMount")
+        try {
+            fetch('https://jsonplaceholder.typicode.com/photos?albumId=' + this.state.number, { method: 'GET' })
+                .then(res => res.json())
+                .then(res => {
+                    console.log("*****************************************")
+                    console.log(res)
+                    if (res.ok) {
+                        console.log(res.data)
+                        this.setState({
+                            post: res.data,
+                            is_load: true
+                        })
+                    }
                 }
-            }
-            )
-            .catch(error => {
-                console.log(error)
-            })
+                )
+                .catch(error => {
+                    console.log(error)
+                })
+        } catch (error) {
+            console.log(`Error on fetch ${error}`)
+        }
     }
 
     render() {

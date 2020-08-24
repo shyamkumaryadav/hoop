@@ -4,12 +4,12 @@ import Cards from "./components/Cards";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <header className="App-header">
         <Hadder />
         <Cards />
       </header>
-    </div>
+    </React.Fragment>
   );
 }
 
