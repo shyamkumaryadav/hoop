@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
     "bootstrap": "^5.0.0-alpha1",
+    "faker": "^5.1.0",
     "googleapis": "^59.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

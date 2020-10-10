@@ -11,7 +11,7 @@ export default class Hadder extends Component {
                     <div className="container">
                         <Link className="navbar-brand" to='/'><p>Home</p>
                         </Link>
-                        <Link className="navbar-brand" to='/login'><p>login</p>
+                        <Link className="navbar-brand" to='/login' ><p>login</p>
                         </Link>
                         <Link className="navbar-brand" to='/logout'><p>logout</p>
                         </Link>
