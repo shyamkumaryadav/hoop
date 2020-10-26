@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 
 export default function TestRoute({ match }) {
 
-    var [jiinfo, setInfo] = useState([]);
+    var [rinfo, setInfo] = useState([]);
     useEffect(() => {
-        console.log(jiinfo)
         setInfo(match)
-        console.log(jiinfo.params)
     }, [match]);
     return (
         <div>
-            <h1>Test {jiinfo.url} and {jiinfo.params | 'no Item'}</h1>
+            <h1>Test {rinfo.url} and {rinfo.params | 'no Item'}</h1>
             <Link to='/shyam'>This is 1 url</Link><br />
             <a href="/kumar">Don't Click me</a> <br />
             <Link to='/rollnumber2'>This is 2 url</Link><br />

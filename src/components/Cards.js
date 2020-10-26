@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react'
-// import google, { photoslibrary } from 'googleapis'
-import Faker from 'faker'
 
 
 export default class Cards extends Component {
@@ -8,7 +6,7 @@ export default class Cards extends Component {
         super(props)
 
         this.state = {
-            posts: Faker.name.title()
+            posts: []
 
         }
     }
@@ -16,24 +14,20 @@ export default class Cards extends Component {
     //     console.log(this.state.posts)
     // }
     frClick = e => {
-        this.setState({ posts: Faker.name.title() })
-        console.log("Faker")
-    }
-    render() {
         return (
             <Fragment>
                 <h3 className="text-center" style={{ color: "red" }}>{this.state.posts}</h3>
-                <p onClick={this.frClick}><b>commitMessage: </b>{Faker.git.commitMessage()}</p>
-                <p onClick={this.frClick}><b>uuid: </b>{Faker.random.uuid()}</p>
-                <p onClick={this.frClick}><b>word: </b>{Faker.lorem.word()}</p>
-                <p onClick={this.frClick}><b>words: </b>{Faker.lorem.words()}</p>
-                <p onClick={this.frClick}><b>sentence: </b>{Faker.lorem.sentence()}</p>
-                <p onClick={this.frClick}><b>slug: </b>{Faker.lorem.slug()}</p>
-                <p onClick={this.frClick}><b>sentences: </b>{Faker.lorem.sentences()}</p>
-                <p onClick={this.frClick}><b>paragraph: </b>{Faker.lorem.paragraph()}</p>
-                <p onClick={this.frClick}><b>paragraphs: </b>{Faker.lorem.paragraphs()}</p>
-                <p onClick={this.frClick}><b>text: </b>{Faker.lorem.text()}</p>
-                <p onClick={this.frClick}><b>lines: </b>{Faker.lorem.lines()}</p>
+                <p onClick={this.frClick}><b>commitMessage: </b>This is lorem   as</p>
+                <p onClick={this.frClick}><b>uuid: </b>This is lorem    as</p>
+                <p onClick={this.frClick}><b>word: </b>This is lorem    as</p>
+                <p onClick={this.frClick}><b>words: </b>This is lorem   as</p>
+                <p onClick={this.frClick}><b>sentence: </b>This is lorem    as</p>
+                <p onClick={this.frClick}><b>slug: </b>This is lorem    as</p>
+                <p onClick={this.frClick}><b>sentences: </b>This is lorem   as</p>
+                <p onClick={this.frClick}><b>paragraph: </b>This is lorem   as</p>
+                <p onClick={this.frClick}><b>paragraphs: </b>This is lorem  as</p>
+                <p onClick={this.frClick}><b>text: </b>This is lorem    as</p>
+                <p onClick={this.frClick}><b>lines: </b>This is lorem   as</p>
             </Fragment >
         )
     }
